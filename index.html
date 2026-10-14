@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Orangery at Heville &amp; Rick</title>
+<meta name="description" content="Candles, soaps and eaux de parfum from the glasshouse of Heville &amp; Rick, each dressed in the season’s artwork. A share of every purchase goes to the season’s artists.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://theorangery.hevilleandrick.com/">
+<link rel="icon" href="orangery-mark.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Orangery at Heville &amp; Rick">
+<meta property="og:title" content="The Orangery at Heville &amp; Rick">
+<meta property="og:description" content="Citrus, leaf and warm glass: candles, soaps and eaux de parfum from the glasshouse of Heville &amp; Rick.">
+<meta property="og:url" content="https://theorangery.hevilleandrick.com/">
+<meta name="theme-color" content="#e6eee3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@400;500&display=swap">
+<style>
+  :root{
+    color-scheme: light;
+    --glass:#e6eee3;      /* the light through the panes: page ground */
+    --wash:#fafbf6;       /* lime-washed wall: surfaces */
+    --bar:#23392e;        /* glazing bars: text and lines */
+    --bar-2:#4a5f52;      /* secondary text */
+    --leaf:#4f7a57;
+    --neroli:#e8892b; --bergamot:#b9b23f; --pinery:#dcb441; --vetiver:#2f6b47;
+    --line:rgba(35,57,46,.22);
+    --serif:"Cormorant Garamond",Garamond,Georgia,serif;
+    --sans:"Jost","Futura","Century Gothic",system-ui,sans-serif;
+    --w:1180px;
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--glass);color:var(--bar);font-family:var(--serif);font-size:21px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  :focus-visible{outline:2px solid var(--neroli);outline-offset:3px}
+  .wrap{max-width:var(--w);margin:0 auto;padding-inline:24px}
+  .label{font-family:var(--sans);font-size:14px;letter-spacing:.02em;color:var(--bar-2)}
+
+  /* header */
+  .top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding-block:18px}
+  .top a{font-family:var(--sans);font-size:15px;text-decoration:none;color:var(--bar-2)}
+  .top a:hover{color:var(--bar);text-decoration:underline;text-underline-offset:4px}
+  .top .home{justify-self:start}
+  .top .bagl{justify-self:end}
+  .word{font-family:var(--serif);font-weight:500;font-size:20px;letter-spacing:.06em;text-decoration:none;color:var(--bar)!important}
+
+  /* the glasshouse: the one bold thing */
+  .house{position:relative;margin:0}
+  .house svg{display:block;width:100%;height:clamp(300px,40vw,640px)}
+  .pane{transition:opacity .9s ease}
+  .title{text-align:center;padding:clamp(28px,5vw,56px) 24px clamp(44px,7vw,84px)}
+  .title h1{font-weight:300;font-style:italic;font-size:clamp(56px,11vw,152px);line-height:.92;letter-spacing:-.01em;margin:0}
+  .title h1 span{display:block;font-style:normal;font-weight:400;font-size:.26em;letter-spacing:.04em;margin-top:.6em;color:var(--bar-2)}
+  .title p{max-width:40ch;margin:28px auto 0;font-size:23px;color:var(--bar-2)}
+
+  section{padding-block:clamp(56px,9vw,112px)}
+  h2{font-weight:400;font-size:clamp(34px,4.6vw,56px);line-height:1.05;margin:0 0 20px;letter-spacing:-.005em}
+  .lede{max-width:56ch;color:var(--bar-2);margin:0}
+
+  /* history: a wall of text beside a single arch */
+  .story{border-top:1px solid var(--line)}
+  .story .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:start}
+  .story p{margin:0 0 1.1em;max-width:58ch}
+  .story p:first-child::first-letter{font-size:3.4em;float:left;line-height:.82;margin:.06em .08em 0 0;font-weight:300;color:var(--leaf)}
+
+  /* the four scents, each in its own bay */
+  .bays{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,2vw,26px);margin-top:44px}
+  .bay{display:flex;flex-direction:column;text-decoration:none;color:inherit}
+  .bay .arch{aspect-ratio:3/5;border-radius:999px 999px 0 0;position:relative;overflow:hidden;border:6px solid var(--wash);box-shadow:0 0 0 1px var(--line)}
+  .bay .arch::before,.bay .arch::after{content:"";position:absolute;background:var(--wash);opacity:.85}
+  .bay .arch::before{left:50%;top:0;bottom:0;width:4px;margin-left:-2px}
+  .bay .arch::after{left:0;right:0;top:58%;height:4px}
+  .bay .arch i{position:absolute;inset:0}
+  .bay h3{font-weight:500;font-size:clamp(23px,2.1vw,28px);line-height:1.15;margin:18px 0 6px}
+  .bay p{margin:0;font-size:18px;color:var(--bar-2);line-height:1.45}
+  .bay .notes{font-family:var(--sans);font-size:14px;color:var(--bar);margin-bottom:8px}
+  a.bay:hover h3{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+
+  /* the three forms */
+  .forms{background:var(--wash);border-block:1px solid var(--line)}
+  .forms dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,56px);margin:40px 0 0}
+  .forms dt{font-size:clamp(26px,2.6vw,34px);font-weight:400;font-style:italic;margin-bottom:8px}
+  .forms dd{margin:0;color:var(--bar-2);max-width:34ch}
+
+  /* the shelf */
+  .shelf .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,4vw,52px) clamp(18px,3vw,36px);margin-top:44px}
+  .item{text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:12px}
+  .item .ph{aspect-ratio:4/5;background:var(--wash);border-radius:280px 280px 0 0;overflow:hidden;display:grid;place-items:center;box-shadow:0 0 0 1px var(--line)}
+  .item .ph img{width:100%;height:100%;object-fit:cover}
+  .item .ph svg{width:56%}
+  .item h3{font-weight:500;font-size:24px;line-height:1.15;margin:0}
+  .item .row{display:flex;justify-content:space-between;gap:12px;font-family:var(--sans);font-size:15px;color:var(--bar-2);border-top:1px solid var(--line);padding-top:10px}
+  .item .row b{font-weight:500;color:var(--bar)}
+  a.item:hover h3{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+  .soon{max-width:52ch;font-style:italic;color:var(--bar-2);margin:36px 0 0}
+
+  .btn{display:inline-block;font-family:var(--sans);font-size:16px;font-weight:500;text-decoration:none;padding:14px 26px;border-radius:999px;border:1.5px solid var(--bar);background:none;color:var(--bar);cursor:pointer}
+  .btn:hover{background:var(--bar);color:var(--glass)}
+  .btn.solid{background:var(--bar);color:var(--glass)}
+  .btn.solid:hover{background:var(--leaf);border-color:var(--leaf)}
+  .btn[disabled]{opacity:.45;cursor:default}
+
+  /* the house that keeps the glasshouse */
+  .patron .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,6vw,96px);align-items:center}
+  .patron p{max-width:52ch;color:var(--bar-2);margin:0 0 28px}
+  .patron img{width:min(280px,70%);margin-inline:auto;opacity:.9}
+
+  /* product */
+  .pview{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,6vw,90px);align-items:start}
+  .pview .ph{aspect-ratio:4/5;background:var(--wash);border-radius:400px 400px 0 0;overflow:hidden;display:grid;place-items:center;box-shadow:0 0 0 1px var(--line)}
+  .pview .ph img{width:100%;height:100%;object-fit:cover}.pview .ph svg{width:50%}
+  .thumbs{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+  .thumbs button{width:64px;height:64px;padding:0;border:1px solid var(--line);background:var(--wash);cursor:pointer;border-radius:32px 32px 0 0;overflow:hidden}
+  .thumbs button[aria-current="true"]{border-color:var(--bar)}
+  .thumbs img{width:100%;height:100%;object-fit:cover}
+  .pinfo h2{margin:6px 0 10px}
+  .pprice{font-family:var(--sans);font-size:22px;margin:16px 0 22px}
+  .opt{display:flex;flex-direction:column;gap:6px;margin:0 0 18px}
+  .opt select{font:inherit;font-family:var(--sans);font-size:17px;background:var(--wash);color:var(--bar);border:1px solid var(--line);padding:11px 12px;max-width:320px;border-radius:6px}
+  .pdesc{white-space:pre-line;color:var(--bar-2);max-width:52ch;margin:28px 0 0}
+  .back{font-family:var(--sans);font-size:15px;background:none;border:0;padding:0;color:var(--bar-2);cursor:pointer;margin-bottom:28px;text-decoration:underline;text-underline-offset:4px}
+
+  footer{border-top:1px solid var(--line);padding-block:36px 52px;font-family:var(--sans);font-size:15px;color:var(--bar-2)}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px 28px;flex-wrap:wrap}
+  footer a{text-underline-offset:3px}
+
+  /* bag */
+  .bag{position:fixed;top:0;right:0;bottom:0;z-index:80;width:min(420px,100%);background:var(--wash);border-left:1px solid var(--line);display:flex;flex-direction:column;transform:translateX(104%);transition:transform .35s ease}
+  .bag.open{transform:none;box-shadow:-24px 0 48px rgba(35,57,46,.18)}
+  .bag header{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid var(--line)}
+  .bag h2{font-size:30px;margin:0}
+  .bag .x{background:none;border:0;font-family:var(--sans);font-size:15px;color:var(--bar-2);cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+  .lines{flex:1;overflow:auto;list-style:none;margin:0;padding:6px 24px}
+  .lines li{display:grid;grid-template-columns:56px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);font-size:18px;line-height:1.25}
+  .lines img{width:56px;height:70px;object-fit:cover;border-radius:28px 28px 0 0}
+  .lines .v{font-family:var(--sans);font-size:13px;color:var(--bar-2)}
+  .qty{display:flex;align-items:center;gap:8px;margin-top:6px;font-family:var(--sans);font-size:14px}
+  .qty button{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--bar);cursor:pointer}
+  .foot{padding:18px 24px 26px;border-top:1px solid var(--line)}
+  .foot .sub{display:flex;justify-content:space-between;font-family:var(--sans);font-size:18px}
+  .foot small{display:block;font-family:var(--sans);font-size:13px;color:var(--bar-2);margin:4px 0 16px}
+  .foot .btn{width:100%;text-align:center}
+  .empty{font-style:italic;color:var(--bar-2);padding:20px 0}
+  .scrim{position:fixed;inset:0;z-index:79;background:rgba(35,57,46,.28)}
+  .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--bar);color:var(--glass);font-family:var(--sans);font-size:15px;padding:11px 20px;border-radius:999px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:90}
+  .toast.on{opacity:1}
+
+  @media (max-width:900px){
+    .bays{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .story .wrap,.patron .wrap,.pview{grid-template-columns:1fr}
+    .forms dl{grid-template-columns:1fr}
+    .shelf .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+  @media (max-width:560px){
+    body{font-size:19px}
+    .top{grid-template-columns:1fr 1fr}.top .word{grid-column:1 / -1;grid-row:1;justify-self:center}
+    .shelf .grid{grid-template-columns:1fr;max-width:400px}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pane,.bag{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap top">
+  <a class="home" href="https://hevilleandrick.com/">Heville &amp; Rick</a>
+  <a class="word" href="#" aria-label="The Orangery, home">The Orangery</a>
+  <a class="bagl" href="#" id="bagBtn">Bag (0)</a>
+</div>
+
+<main>
+<div id="v-home">
+  <figure class="house" aria-hidden="true">
+    <svg viewBox="0 0 1600 640" preserveAspectRatio="xMidYMid slice" id="facade">
+      <defs>
+        <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffdf2" stop-opacity=".9"/><stop offset=".5" stop-color="#fffdf2" stop-opacity="0"/></linearGradient>
+        <pattern id="bars" width="40" height="56" patternUnits="userSpaceOnUse"><path d="M0 0H40M0 0V56" stroke="#fafbf6" stroke-width="3" fill="none"/></pattern>
+      </defs>
+      <rect width="1600" height="640" fill="#fafbf6"/>
+      <g id="bays"></g>
+      <rect y="560" width="1600" height="80" fill="#dfe6d9"/>
+      <rect y="556" width="1600" height="6" fill="#23392e" opacity=".18"/>
+    </svg>
+  </figure>
+  <div class="title">
+    <h1>The Orangery<span>at Heville &amp; Rick</span></h1>
+    <p>Candles, soaps and eaux de parfum from the glasshouse, each dressed in the season’s artwork.</p>
+  </div>
+
+  <section class="story">
+    <div class="wrap">
+      <h2>Rooms built to keep summer through the winter</h2>
+      <div>
+        <p>In the seventeenth and eighteenth centuries the great houses of Europe built orangeries: long rooms of tall south-facing windows where citrus trees were carried through the cold months. Later glasshouses raised pineapples in heated pits and, at Chatsworth in the 1830s, the banana that became the Cavendish.</p>
+        <p>The Orangery at Heville &amp; Rick takes its scents from those rooms: the blossom, the leaf, the warm glass and the damp earth of the tubs. Each season the labels carry the work of the artists the house is showing, and a share of every purchase goes to them.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="scents" id="scents">
+    <div class="wrap">
+      <h2>Four scents</h2>
+      <p class="lede">Each comes as a candle, a soap and an eau de parfum.</p>
+      <div class="bays" id="bayList"></div>
+    </div>
+  </section>
+
+  <section class="forms">
+    <div class="wrap">
+      <h2>Three forms</h2>
+      <dl>
+        <div><dt>Candle</dt><dd>Poured into a glass vessel, with the season’s artwork on the label.</dd></div>
+        <div><dt>Soap</dt><dd>A bar for the hand or the bath, wrapped in paper printed with the same design.</dd></div>
+        <div><dt>Eau de parfum</dt><dd>The scent itself, to wear, in a bottle that is meant to be kept.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="shelf" id="shop">
+    <div class="wrap">
+      <h2>The shelf</h2>
+      <p class="lede" id="shelfLede">Everything currently available from the glasshouse.</p>
+      <div class="grid" id="shelfGrid"></div>
+      <p class="soon" id="soon" hidden>The first season of scents is being prepared. The shelf fills here as soon as it opens.</p>
+    </div>
+  </section>
+
+  <section class="patron">
+    <div class="wrap">
+      <div>
+        <h2>Kept by a gallery</h2>
+        <p>The Orangery belongs to House of Heville &amp; Rick, which publishes limited, framed editions by working illustrators and designers each season and returns a large share of every sale to the artist. The scents are one more way to carry that season’s work home.</p>
+        <a class="btn" href="https://hevilleandrick.com/#artists">Meet this season’s artists</a>
+      </div>
+      <img src="hr-mark-drawn.svg" alt="The Heville &amp; Rick lion" width="660" height="559" loading="lazy">
+    </div>
+  </section>
+</div>
+
+<section id="v-product" hidden aria-live="polite">
+  <div class="wrap">
+    <button class="back" id="pBack" type="button">Back to the Orangery</button>
+    <div class="pview" id="pView"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 House of Heville &amp; Rick, a house of <a href="https://ontokinesis.com/company/">Ontokinesis Applied Systems</a></span>
+    <span><a href="https://hevilleandrick.com/">The gallery</a> &nbsp; <a href="https://hevilleandrick.com/privacy.html">Privacy</a></span>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="bag" id="bag" aria-label="Bag" aria-hidden="true">
+  <header><h2>Bag</h2><button class="x" id="bagClose" type="button">Close</button></header>
+  <ul class="lines" id="lines"></ul>
+  <div class="foot" id="foot"></div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="shopify.js"></script>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const sized = (url, w) => url + (url.includes('?') ? '&' : '?') + 'width=' + w;
+
+  /* ------------------------------------------------------------------
+     THE SCENTS. One entry per scent, in the order of the bays.
+       handle: the Shopify product handle (its page opens from the bay once the product is published)
+       colour: the bay's light;  leaf: the second colour in the glass
+     ------------------------------------------------------------------ */
+  const SCENTS = [
+    { name: 'Neroli Under Glass',     handle: 'neroli-under-glass',     colour: '#e8892b', leaf: '#f4c37a', notes: 'Orange blossom, petitgrain, warm glass', line: 'The orange trees in flower, the windows shut against March.' },
+    { name: 'Bergamot & Fig Leaf',    handle: 'bergamot-fig-leaf',      colour: '#b9b23f', leaf: '#6f8f4e', notes: 'Bergamot, green fig, terracotta',        line: 'A fig trained against the back wall, its leaves crushed in passing.' },
+    { name: 'The Pinery',             handle: 'the-pinery',             colour: '#dcb441', leaf: '#8a9a52', notes: 'Pineapple, cut grass, tanbark',          line: 'After the heated pits where pineapples were raised in bark.' },
+    { name: 'Banana Leaf & Vetiver',  handle: 'banana-leaf-vetiver',    colour: '#2f6b47', leaf: '#7fa36d', notes: 'Banana leaf, vetiver, wet stone',        line: 'After the Cavendish banana, first raised under glass at Chatsworth.' },
+  ];
+  const COLLECTION = 'the-orangery';
+  const CANDLE = '<svg viewBox="0 0 200 200" aria-hidden="true"><rect x="62" y="70" width="76" height="96" rx="6" fill="#c98a3a" opacity=".85"/><rect x="62" y="96" width="76" height="40" fill="#fafbf6"/><path d="M100 46 C108 56 108 64 100 70 C92 64 92 56 100 46Z" fill="#e8892b"/><rect x="98" y="62" width="4" height="10" fill="#4a5f52"/></svg>';
+
+  /* ---------- the facade: four bays of glass, one per scent, repeated across the wall ---------- */
+  (function facade(){
+    const g = $('bays'); const W = 1600, n = 8, gap = 26, bw = (W - gap * (n + 1)) / n, top = 60, bottom = 556;
+    let out = '';
+    for (let i = 0; i < n; i++){
+      const s = SCENTS[i % SCENTS.length], x = gap + i * (bw + gap), r = bw / 2, cx = x + r;
+      const d = `M${x} ${bottom} V${top + r} A${r} ${r} 0 0 1 ${x + bw} ${top + r} V${bottom} Z`;
+      out += `<g><path d="${d}" fill="${s.leaf}" opacity=".55"/>
+        <path class="pane" d="${d}" fill="${s.colour}" opacity=".78"/>
+        <path d="${d}" fill="url(#sun)"/>
+        <path d="${d}" fill="url(#bars)" opacity=".9"/>
+        <path d="M${cx} ${top} V${bottom}" stroke="#fafbf6" stroke-width="5"/>
+        <path d="M${x} ${top + r} A${r} ${r} 0 0 1 ${x + bw} ${top + r}" stroke="#fafbf6" stroke-width="6" fill="none"/>
+        <path d="${d}" stroke="#23392e" stroke-opacity=".28" stroke-width="2" fill="none"/>
+        ${tree(cx, bottom, s)}</g>`;
+    }
+    g.innerHTML = out;
+    function tree(cx, b, s){   /* a citrus tree in a square Versailles tub */
+      return `<rect x="${cx-34}" y="${b-70}" width="68" height="70" fill="#fafbf6" stroke="#23392e" stroke-opacity=".35" stroke-width="2"/>
+        <rect x="${cx-40}" y="${b-76}" width="80" height="8" fill="#fafbf6" stroke="#23392e" stroke-opacity=".35" stroke-width="2"/>
+        <rect x="${cx-3}" y="${b-150}" width="6" height="76" fill="#4a5f52"/>
+        <circle cx="${cx}" cy="${b-178}" r="52" fill="#23392e" opacity=".82"/>
+        <circle cx="${cx-18}" cy="${b-192}" r="7" fill="${s.colour === '#2f6b47' ? '#dcb441' : '#f2a33c'}"/><circle cx="${cx+20}" cy="${b-170}" r="7" fill="${s.colour === '#2f6b47' ? '#dcb441' : '#f2a33c'}"/><circle cx="${cx+4}" cy="${b-206}" r="6" fill="${s.colour === '#2f6b47' ? '#dcb441' : '#f2a33c'}"/>`;
+    }
+  })();
+
+  /* ---------- the four bays of scents ---------- */
+  function drawBays(){
+    $('bayList').innerHTML = SCENTS.map(s => {
+      const live = LIVE && LIVE.byHandle[s.handle];
+      const tag = live ? 'a' : 'div', href = live ? ` href="#p-${esc(s.handle)}"` : '';
+      return `<${tag} class="bay"${href}><div class="arch"><i style="background:linear-gradient(180deg,${s.colour},${s.leaf})"></i></div>
+        <h3>${esc(s.name)}</h3><p class="notes">${esc(s.notes)}</p><p>${esc(s.line)}</p></${tag}>`;
+    }).join('');
+  }
+
+  /* ---------- the shelf ---------- */
+  let LIVE = null;
+  const priceOf = p => { const lo = p.priceRange.minVariantPrice, hi = p.priceRange.maxVariantPrice; return Number(lo.amount) === Number(hi.amount) ? SHOP.money(lo) : 'From ' + SHOP.money(lo); };
+  const forms = p => p.options.filter(o => o.optionValues.length > 1).map(o => o.optionValues.map(v => v.name).join(', ')).join('; ');
+  function drawShelf(){
+    const items = LIVE ? LIVE.items : [];
+    $('shelfGrid').innerHTML = items.map(p => `<a class="item" href="#p-${esc(p.handle)}">
+        <div class="ph">${p.featuredImage ? `<img src="${esc(sized(p.featuredImage.url, 800))}" alt="${esc(p.featuredImage.altText || p.title)}" loading="lazy">` : CANDLE}</div>
+        <h3>${esc(p.title)}</h3>
+        <div class="row"><span>${esc(forms(p))}</span><b>${p.availableForSale ? esc(priceOf(p)) : 'Sold out'}</b></div></a>`).join('');
+    $('soon').hidden = !!items.length || !LIVE;
+    $('shelfLede').hidden = !items.length;
+  }
+
+  /* ---------- a product ---------- */
+  function drawProduct(handle){
+    const p = LIVE && LIVE.byHandle[handle]; if (!p){ location.hash = ''; return; }
+    const imgs = p.images.nodes.length ? p.images.nodes : (p.featuredImage ? [p.featuredImage] : []);
+    const opts = p.options.filter(o => o.optionValues.length > 1);
+    $('pView').innerHTML = `
+      <div><div class="ph">${imgs[0] ? `<img id="pMain" src="${esc(sized(imgs[0].url, 1400))}" alt="${esc(imgs[0].altText || p.title)}">` : CANDLE}</div>
+        ${imgs.length > 1 ? `<div class="thumbs">${imgs.map((im, i) => `<button type="button" data-i="${i}" aria-current="${i === 0}" aria-label="Picture ${i + 1}"><img src="${esc(sized(im.url, 200))}" alt=""></button>`).join('')}</div>` : ''}</div>
+      <div class="pinfo">
+        <h2>${esc(p.title)}</h2>
+        <p class="pprice" id="pPrice"></p>
+        ${opts.map((o, i) => `<div class="opt"><label class="label" for="opt${i}">${esc(o.name)}</label><select id="opt${i}" data-name="${esc(o.name)}">${o.optionValues.map(v => `<option>${esc(v.name)}</option>`).join('')}</select></div>`).join('')}
+        <button class="btn solid" id="pAdd" type="button">Add to bag</button>
+        ${p.description ? `<p class="pdesc">${esc(p.description)}</p>` : ''}
+      </div>`;
+    $('pView').querySelectorAll('.thumbs button').forEach(b => b.onclick = () => {
+      $('pMain').src = sized(imgs[+b.dataset.i].url, 1400);
+      $('pView').querySelectorAll('.thumbs button').forEach(x => x.setAttribute('aria-current', String(x === b)));
+    });
+    const pick = () => {
+      const chosen = {}; $('pView').querySelectorAll('select[data-name]').forEach(s => chosen[s.dataset.name] = s.value);
+      return p.variants.nodes.find(v => v.selectedOptions.every(o => !(o.name in chosen) || chosen[o.name] === o.value)) || p.variants.nodes[0];
+    };
+    const sync = () => {
+      const v = pick(); if (!v) return;
+      $('pPrice').textContent = SHOP.money(v.price);
+      $('pAdd').disabled = !v.availableForSale; $('pAdd').textContent = v.availableForSale ? 'Add to bag' : 'Sold out';
+      if (v.image && $('pMain')) $('pMain').src = sized(v.image.url, 1400);
+    };
+    $('pView').querySelectorAll('select').forEach(s => s.onchange = sync); sync();
+    $('pAdd').onclick = async () => {
+      const v = pick(); if (!v || !v.availableForSale) return;
+      $('pAdd').disabled = true; $('pAdd').textContent = 'Adding';
+      try { drawBag(await SHOP.cart.add(v.id, 1)); openBag(); say('Added to bag'); }
+      catch(e){ say('Not added: ' + e.message); }
+      sync();
+    };
+    show('product');
+  }
+  $('pBack').onclick = () => { location.hash = 'shop'; };
+
+  function show(v){ $('v-home').hidden = v !== 'home'; $('v-product').hidden = v !== 'product'; if (v === 'product') scrollTo({ top: 0, behavior: 'instant' }); }
+  function route(){
+    const h = location.hash.slice(1);
+    if (h.startsWith('p-')){ if (LIVE) drawProduct(h.slice(2)); return; }
+    const wasProduct = !$('v-product').hidden;
+    show('home');
+    if (h && wasProduct){ const t = $(h); if (t) t.scrollIntoView(); }
+  }
+  addEventListener('hashchange', route);
+
+  /* ---------- the bag ---------- */
+  const toast = $('toast'); let tt;
+  const say = t => { toast.textContent = t; toast.classList.add('on'); clearTimeout(tt); tt = setTimeout(() => toast.classList.remove('on'), 2600); };
+  const bag = $('bag'), scrim = $('scrim');
+  function openBag(){ bag.classList.add('open'); bag.setAttribute('aria-hidden', 'false'); scrim.hidden = false; $('bagClose').focus(); }
+  function closeBag(){ bag.classList.remove('open'); bag.setAttribute('aria-hidden', 'true'); scrim.hidden = true; }
+  $('bagClose').onclick = closeBag; scrim.onclick = closeBag;
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && bag.classList.contains('open')) closeBag(); });
+  $('bagBtn').addEventListener('click', e => { e.preventDefault(); openBag(); });
+  function drawBag(cart){
+    const lines = cart ? cart.lines.nodes : [];
+    $('bagBtn').textContent = `Bag (${cart ? cart.totalQuantity : 0})`;
+    $('lines').innerHTML = lines.length ? lines.map(l => {
+      const m = l.merchandise, im = m.image || m.product.featuredImage;
+      return `<li>${im ? `<img src="${esc(sized(im.url, 160))}" alt="">` : '<span></span>'}
+        <div><div>${esc(m.product.title)}</div>${!['Default Title','Standard'].includes(m.title) ? `<div class="v">${esc(m.title)}</div>` : ''}
+        <div class="qty"><button type="button" data-l="${esc(l.id)}" data-q="${l.quantity - 1}" aria-label="One fewer">−</button><span>${l.quantity}</span><button type="button" data-l="${esc(l.id)}" data-q="${l.quantity + 1}" aria-label="One more">+</button></div></div>
+        <div class="v">${esc(SHOP.money(l.cost.totalAmount))}</div></li>`;
+    }).join('') : '<li class="empty">The bag is empty.</li>';
+    $('foot').innerHTML = lines.length ? `<div class="sub"><span>Subtotal</span><span>${esc(SHOP.money(cart.cost.subtotalAmount))}</span></div><small>Shipping and taxes are added at checkout.</small><a class="btn solid" href="${esc(cart.checkoutUrl)}">Go to checkout</a>` : '';
+    $('lines').querySelectorAll('[data-l]').forEach(b => b.onclick = async () => { b.disabled = true; try { drawBag(await SHOP.cart.setQty(b.dataset.l, +b.dataset.q)); } catch(e){ say(e.message); b.disabled = false; } });
+  }
+
+  /* ---------- the live store ---------- */
+  async function load(){
+    const empty = { items: [], byHandle: {} };
+    try {
+      const col = await SHOP.collection(COLLECTION);
+      const items = col ? col.products.nodes : [];
+      LIVE = { items, byHandle: Object.fromEntries(items.map(p => [p.handle, p])) };
+    } catch(e){ console.warn('store', e); LIVE = empty; }
+    drawBays(); drawShelf(); route();
+    try { drawBag(await SHOP.cart.get()); } catch(e){ drawBag(null); }
+  }
+  drawBays(); drawShelf(); route(); load();
+})();
+</script>
+</body>
+</html>

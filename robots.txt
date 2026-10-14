@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://theorangery.hevilleandrick.com/sitemap.xml
